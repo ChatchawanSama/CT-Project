@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="286.0" prefWidth="641.0" xmlns="http://javafx.com/javafx/"
+            fx:controller="ku.cs.controllers.CreditController">
+    <children>
+        <Label layoutX="35.0" layoutY="204.0" prefHeight="18.0" prefWidth="116.0" text="นายซาฮิล ชูดวง (ซาฮิล)"/>
+        <Label layoutX="56.0" layoutY="234.0" text="6310406281"/>
+        <Label layoutX="182.0" layoutY="205.0" text="นายธงไทย รุจิเวชวงษ์(แฟรงค์)"/>
+        <Label layoutX="215.0" layoutY="234.0" text="6310403982"/>
+        <Label layoutX="356.0" layoutY="205.0" text="นายไมเคิล แซ่เติน(ตี๋ตี๋)"/>
+        <Label layoutX="376.0" layoutY="234.0" text="6310401122"/>
+        <Label layoutX="517.0" layoutY="205.0" text="นายชัชวาลย์ สามา(ตี๋)"/>
+        <Label layoutX="527.0" layoutY="234.0" text="6310406272"/>
+        <Label layoutX="254.0" layoutY="14.0" text="Developed by">
+            <font>
+                <Font size="21.0"/>
+            </font>
+        </Label>
+        <Rectangle fx:id="zahilRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="135.0" layoutX="27.0"
+                   layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="122.0"/>
+        <Rectangle fx:id="frankRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="135.0" layoutX="183.0"
+                   layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="129.0"/>
+        <Rectangle fx:id="michaelRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="135.0" layoutX="344.0"
+                   layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="129.0"/>
+        <Rectangle fx:id="teeRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="135.0" layoutX="501.0"
+                   layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="116.0"/>
+    </children>
+</AnchorPane>

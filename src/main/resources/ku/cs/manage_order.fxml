@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.ManageOrderController">
+    <children>
+        <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;"
+                text="&lt;&lt; Back"/>
+        <Button fx:id="myProductButton" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="My product"/>
+        <Button fx:id="myOrderButton" layoutX="14.0" layoutY="227.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="My order"/>
+        <Button fx:id="myPromotionButton" layoutX="14.0" layoutY="296.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;"
+                text="My promotion"/>
+        <Circle fx:id="shopImgCircle" fill="DODGERBLUE" layoutX="365.0" layoutY="66.0" onMouseClicked="#changeShopImg"
+                onMouseEntered="#mouseEnteredShopImgCircle" onMouseExited="#mouseExitedShopImgCircle" radius="36.0"
+                stroke="BLACK" strokeType="INSIDE">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Circle>
+        <HBox layoutX="426.0" layoutY="66.0" prefHeight="18.0" prefWidth="519.0">
+            <children>
+                <Label text="Shop : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="name" prefHeight="18.0" prefWidth="469.0" text="name">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="orderListPane" layoutX="145.0" layoutY="134.0" prefHeight="626.0" prefWidth="870.0"
+                    style="-fx-border-color: #CCCCCC;" styleClass="primary-color">
+            <children>
+                <ListView id="lion" fx:id="orderListView" layoutX="38.0" layoutY="36.0" prefHeight="222.0"
+                          prefWidth="268.0"/>
+                <Label fx:id="name1" layoutX="38.0" layoutY="14.0" prefHeight="18.0" prefWidth="107.0"
+                       text="Wating order : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Rectangle fx:id="orderProductRegImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="188.0"
+                           layoutX="331.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" width="201.0"/>
+                <Text fx:id="productOrderNameText" layoutX="554.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="productOrderNameText"/>
+                <Text fx:id="quantityText" layoutX="554.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="quantityText" wrappingWidth="68.79999999999995"/>
+                <Text fx:id="totalPriceText" layoutX="552.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="totalPriceText"/>
+                <Circle fx:id="buyerCircleImg" fill="DODGERBLUE" layoutX="577.0" layoutY="167.0" radius="25.0"
+                        stroke="BLACK" strokeType="INSIDE"/>
+                <Text fx:id="buyerNameText" layoutX="625.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="buyerNameText" wrappingWidth="201.0"/>
+                <HBox layoutX="542.0" layoutY="201.0" prefHeight="18.0" prefWidth="183.0" styleClass="primary-color">
+                    <children>
+                        <Label fx:id="trackLabel" text="Track : "/>
+                        <Text fx:id="trackText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text"
+                              text="trackText"/>
+                    </children>
+                </HBox>
+                <TextField fx:id="trackTextField" layoutX="542.0" layoutY="230.0" promptText="Track"/>
+                <Button fx:id="giveTrackButton" layoutX="690.0" layoutY="230.0" mnemonicParsing="false"
+                        text="Give track"/>
+                <Label fx:id="deliveryLabel" layoutX="552.0" layoutY="235.0" text="Delivery Succeeded"
+                       textFill="#08b1cf"/>
+                <Label fx:id="buyerLabel" layoutX="554.0" layoutY="118.0" text="Buyer : "/>
+                <ListView id="lion" fx:id="orderDeliveredListView" layoutX="36.0" layoutY="374.0" prefHeight="222.0"
+                          prefWidth="268.0"/>
+                <Label layoutX="36.0" layoutY="349.0" text="Delivered order : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Rectangle fx:id="orderDeliProductRegImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE"
+                           height="188.0" layoutX="329.0" layoutY="374.0" stroke="BLACK" strokeType="INSIDE"
+                           width="201.0"/>
+                <Circle fx:id="buyerDeliCircleImg" fill="DODGERBLUE" layoutX="578.0" layoutY="534.0" radius="25.0"
+                        stroke="BLACK" strokeType="INSIDE"/>
+                <Text fx:id="buyerDeliNameText" layoutX="626.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="buyerDeliNameText" wrappingWidth="201.0"/>
+                <Label fx:id="buyerDeliLabel" layoutX="555.0" layoutY="485.0" text="Buyer : "/>
+                <Text fx:id="productDeliOrderNameText" layoutX="552.0" layoutY="398.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" styleClass="main-text" text="productDeliOrderNameText"/>
+                <Text fx:id="quantityDeliOrderText" layoutX="550.0" layoutY="422.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" styleClass="main-text" text="quantityDeliOrderText"
+                      wrappingWidth="183.20000000000005"/>
+                <Text fx:id="totalPriceDeliOrderText" layoutX="550.0" layoutY="449.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" styleClass="main-text" text="totalPriceDeliOrderText"/>
+                <HBox layoutX="550.0" layoutY="458.0" prefHeight="18.0" prefWidth="183.0" styleClass="primary-color">
+                    <children>
+                        <Label fx:id="trackDeliLabel" text="Track : "/>
+                        <Text fx:id="trackDeliText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="main-text"
+                              text="trackText"/>
+                    </children>
+                </HBox>
+                <Label fx:id="emptyTrackLabel" layoutX="543.0" layoutY="258.0" prefHeight="18.0" prefWidth="217.0"
+                       text="Track cannot be empty." textFill="RED"/>
+            </children>
+        </AnchorPane>
+        <Label fx:id="changeImgLabel" layoutX="322.0" layoutY="108.0" prefHeight="18.0" prefWidth="85.0"
+               text="Change image">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <HBox layoutX="29.0" layoutY="30.0" prefHeight="72.0" prefWidth="201.0">
+            <children>
+                <Rectangle fx:id="imgToMarket" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0"
+                           onMouseClicked="#returnToMarket" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Rectangle>
+                <Label onMouseClicked="#returnToMarket" prefHeight="72.0" prefWidth="136.0" text="  Marketplace">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

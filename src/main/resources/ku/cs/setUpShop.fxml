@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.SetUpShopController">
+    <children>
+        <AnchorPane layoutX="236.0" layoutY="85.0" prefHeight="567.0" prefWidth="552.0" styleClass="primary-color">
+            <children>
+                <Button fx:id="backButton" layoutX="42.0" layoutY="487.0" mnemonicParsing="false" prefHeight="30.0"
+                        prefWidth="103.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;"
+                        text="&lt;&lt; Back"/>
+                <Button layoutX="425.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleSubmitButton"
+                        prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #FF6666;" text="Create"
+                        textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Button>
+                <TextField fx:id="shopNameTextField" layoutX="146.0" layoutY="414.0" prefHeight="46.0" prefWidth="287.0"
+                           promptText="Shop name">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </TextField>
+                <Label layoutX="50.0" layoutY="423.0" prefHeight="27.0" prefWidth="87.0" text="Shop name :  ">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Pane layoutX="94.0" layoutY="39.0" prefHeight="62.0" prefWidth="363.0" styleClass="secondary-color">
+                    <children>
+                        <ImageView fx:id="createShopLabelImgView" fitHeight="38.0" fitWidth="196.0" layoutX="116.0"
+                                   layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/create_shop_label.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="createShopIconImgView" fitHeight="45.0" fitWidth="49.0" layoutX="63.0"
+                                   layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/create_shop_icon.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Label fx:id="alertSetUpShop" layoutX="145.0" layoutY="461.0" text="alertSetUpShop" textFill="RED"/>
+                <Rectangle fx:id="shopProfileImgRec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="151.0"
+                           layoutX="186.0" layoutY="141.0" stroke="WHITE" strokeType="INSIDE" width="165.0"/>
+                <HBox layoutX="147.0" layoutY="349.0" prefHeight="27.0" prefWidth="287.0">
+                    <children>
+                        <Label fx:id="shopImgPathLabel" prefHeight="26.0" prefWidth="234.0"
+                               style="-fx-background-color: #CCCCCC;" text="shopImgPathLabel"/>
+                        <Button fx:id="chooseShopImgButton" mnemonicParsing="false" text="Choose File"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

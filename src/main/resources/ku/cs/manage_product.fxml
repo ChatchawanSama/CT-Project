@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.ManageProductController">
+    <children>
+        <Button fx:id="backButton" layoutX="14.0" layoutY="362.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;"
+                text="&lt;&lt; Back"/>
+        <Button fx:id="myProductButton" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="My product"/>
+        <Button fx:id="myOrderButton" layoutX="14.0" layoutY="227.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="My order"/>
+        <Button fx:id="myPromotionButton" layoutX="14.0" layoutY="296.0" mnemonicParsing="false" prefHeight="43.0"
+                prefWidth="107.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;"
+                text="My promotion"/>
+        <Circle fx:id="shopImgCircle" fill="DODGERBLUE" layoutX="365.0" layoutY="66.0" onMouseClicked="#changeShopImg"
+                onMouseEntered="#mouseEnteredShopImgCircle" onMouseExited="#mouseExitedShopImgCircle" radius="36.0"
+                stroke="BLACK" strokeType="INSIDE">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Circle>
+        <HBox layoutX="426.0" layoutY="66.0" prefHeight="18.0" prefWidth="519.0">
+            <children>
+                <Label text="Shop : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="name" prefHeight="18.0" prefWidth="469.0" text="name">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="orderListPane" layoutX="145.0" layoutY="134.0" prefHeight="626.0" prefWidth="870.0"
+                    style="-fx-border-color: #CCCCCC;" styleClass="primary-color">
+            <children>
+                <ListView id="lion" fx:id="productsListView" layoutX="79.0" layoutY="52.0" prefHeight="302.0"
+                          prefWidth="268.0"/>
+                <Button fx:id="addProductButton" layoutX="371.0" layoutY="52.0" mnemonicParsing="false"
+                        prefHeight="36.0" prefWidth="92.0"
+                        style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="Add product"/>
+                <Button fx:id="editProductButton" layoutX="371.0" layoutY="102.0" mnemonicParsing="false"
+                        prefHeight="36.0" prefWidth="92.0"
+                        style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="Edit"/>
+                <Rectangle fx:id="productRecImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="188.0"
+                           layoutX="530.0" layoutY="44.0" stroke="BLACK" strokeType="INSIDE" width="201.0"/>
+                <Text fx:id="productNameText" layoutX="530.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="productNameText" wrappingWidth="149.5999999999999"/>
+                <Label fx:id="priceLabel" layoutX="530.0" layoutY="304.0" text="priceLabel"/>
+                <Text fx:id="detailText" layoutX="530.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      styleClass="main-text" text="detailText" wrappingWidth="214.60003662109375"/>
+                <Button fx:id="moreButton" layoutX="673.0" layoutY="242.0" mnemonicParsing="false"
+                        style="-fx-border-color: #CCCCCC; -fx-background-color: #FFFFFF;" text="More... "/>
+                <HBox layoutX="530.0" layoutY="335.0" prefHeight="18.0" prefWidth="236.0" styleClass="primary-color">
+                    <children>
+                        <Label fx:id="quantityRemainHeadLabel" text="Quantity remain : "/>
+                        <Label fx:id="quantityRemainLabel" text="quantityRemainLabel"/>
+                    </children>
+                </HBox>
+                <Button fx:id="deleteProductButton" layoutX="371.0" layoutY="152.0" mnemonicParsing="false"
+                        prefHeight="36.0" prefWidth="92.0"
+                        style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="Delete"/>
+            </children>
+        </AnchorPane>
+        <Label fx:id="changeImgLabel" layoutX="322.0" layoutY="108.0" prefHeight="18.0" prefWidth="85.0"
+               text="Change image">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <HBox layoutX="29.0" layoutY="30.0" prefHeight="72.0" prefWidth="201.0">
+            <children>
+                <Rectangle fx:id="imgToMarket" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="72.0"
+                           onMouseClicked="#returnToMarket" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Rectangle>
+                <Label onMouseClicked="#returnToMarket" prefHeight="72.0" prefWidth="136.0" text="  Marketplace">
+                    <font>
+                        <Font name="System Bold" size="20.0"/>
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Label>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

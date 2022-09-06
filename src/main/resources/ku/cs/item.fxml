@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/" fx:id="itemPane" onMouseClicked="#handleItem"
+            onMouseEntered="#mouseEnteredItem" onMouseExited="#mouseExitedItem" prefHeight="219.0" prefWidth="158.0"
+            style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/"
+            fx:controller="ku.cs.controllers.ItemController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="221.0" prefWidth="158.0" spacing="10.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="146.0" prefWidth="114.0">
+                    <children>
+                        <Rectangle fx:id="rectangleProductImage" arcHeight="5.0" arcWidth="5.0" fill="#ff7aa7"
+                                   height="150.0" onMouseClicked="#handleItem" stroke="WHITE" strokeType="INSIDE"
+                                   width="156.0"/>
+                    </children>
+                </HBox>
+                <VBox prefHeight="68.0" prefWidth="180.0">
+                    <children>
+                        <HBox prefHeight="24.0" prefWidth="180.0">
+                            <children>
+                                <HBox prefHeight="24.0" prefWidth="9.0"/>
+                                <Text fx:id="productNameText" onMouseClicked="#handleItem" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="productNameText" wrappingWidth="129.3367099761963">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="22.0" prefWidth="156.0">
+                            <children>
+                                <HBox prefHeight="22.0" prefWidth="9.0"/>
+                                <Label fx:id="priceLabel" onMouseClicked="#handleItem" prefHeight="28.0"
+                                       prefWidth="130.0" text="priceLabel" textAlignment="CENTER" textFill="#ff6666">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

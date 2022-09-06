@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.ShopController">
+    <children>
+        <Pane layoutX="30.0" layoutY="35.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="712.0" prefWidth="166.0" styleClass="primary-color"
+              AnchorPane.leftAnchor="30.0">
+            <children>
+                <Pane layoutX="12.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="98.0" prefWidth="150.0">
+                    <children>
+                        <Pane layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              minWidth="-Infinity" prefHeight="75.0" prefWidth="150.0" styleClass="primary-color">
+                            <children>
+                                <Label fx:id="displayNameLabel" layoutX="28.0" layoutY="38.0" prefHeight="22.0"
+                                       prefWidth="157.0" text="displayNameLabel" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Circle fx:id="profileCircleImage" fill="#ff7aa7" layoutX="66.0" layoutY="26.0" radius="25.0"
+                                stroke="WHITE" strokeType="OUTSIDE" strokeWidth="2.0"/>
+                    </children>
+                </Pane>
+                <VBox fx:id="marketplaceVBox" alignment="TOP_CENTER" layoutX="33.0" layoutY="100.0" prefHeight="117.0"
+                      prefWidth="107.0" spacing="30.0" styleClass="primary-color">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="73.0" spacing="20.0">
+                            <children>
+                                <Circle fx:id="adminCirclePointer" fill="#ff7aa7" radius="3.5" stroke="WHITE"
+                                        strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                <Label fx:id="adminLabel" prefHeight="17.0" prefWidth="45.0" styleClass="primary-color"
+                                       text="Admin">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="88.0" spacing="20.0">
+                            <children>
+                                <Circle fx:id="accountCirclePointer" fill="#ff7aa7" radius="3.5" stroke="WHITE"
+                                        strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                <Label fx:id="accountLabel" prefHeight="20.0" prefWidth="60.0" text="Account">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="73.0" spacing="20.0">
+                            <children>
+                                <Circle fx:id="shopCirclePointer" fill="#ff7aa7" radius="3.5" stroke="WHITE"
+                                        strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                <Label fx:id="myShopLabel" prefHeight="20.0" prefWidth="60.0" text="My Shop">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Circle fx:id="logoCircleImage" fill="#ff7aa7" layoutX="39.0" layoutY="36.0" radius="14.25"
+                        stroke="WHITE" strokeType="INSIDE"/>
+                <Label layoutX="59.0" layoutY="31.0" text="MENU">
+                    <font>
+                        <Font name="Work Sans Regular" size="10.0"/>
+                    </font>
+                </Label>
+                <VBox layoutX="25.0" layoutY="115.0" prefHeight="81.0" prefWidth="4.0" spacing="37.0"/>
+                <VBox fx:id="shopVBox" layoutX="33.0" layoutY="147.0" prefHeight="75.0" prefWidth="107.0"
+                      spacing="30.0">
+                    <children>
+                        <HBox fx:id="marketplaceHBox" alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="73.0"
+                              spacing="20.0">
+                            <children>
+                                <Circle fx:id="marketplaceCirclePointer" fill="#ff7aa7" radius="3.5" stroke="WHITE"
+                                        strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                <Label fx:id="marketplaceLabel" prefHeight="17.0" prefWidth="81.0"
+                                       styleClass="primary-color" text="Marketplace">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="manageShopHBox" alignment="CENTER_LEFT" prefHeight="17.0" prefWidth="73.0"
+                              spacing="20.0" styleClass="primary-color">
+                            <children>
+                                <Circle fx:id="manageShopCirclePointer" fill="#ff7aa7" radius="3.5" stroke="WHITE"
+                                        strokeType="OUTSIDE" strokeWidth="0.0"/>
+                                <Label fx:id="manageShopLabel" prefHeight="17.0" prefWidth="119.0"
+                                       styleClass="primary-color" text="Manage Shop">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+        <Pane layoutX="231.0" layoutY="107.0" prefHeight="628.0" prefWidth="751.0">
+            <children>
+                <Pane layoutX="-1.0" layoutY="60.0" prefHeight="54.0" prefWidth="751.0" styleClass="primary-color">
+                    <children>
+                        <ChoiceBox fx:id="sortByChoiceBox" layoutX="611.0" layoutY="14.0" prefHeight="27.0"
+                                   prefWidth="100.0">
+                            <styleClass>
+                                <String fx:value="combo-box"/>
+                                <String fx:value="combo-box-base"/>
+                                <String fx:value="white-color"/>
+                            </styleClass>
+                        </ChoiceBox>
+                        <ChoiceBox fx:id="categoryChoiceBox" layoutX="86.0" layoutY="14.0" prefHeight="27.0"
+                                   prefWidth="94.0">
+                            <styleClass>
+                                <String fx:value="combo-box-base"/>
+                                <String fx:value="combo-box"/>
+                                <String fx:value="white-color"/>
+                            </styleClass>
+                        </ChoiceBox>
+                        <Label layoutX="549.0" layoutY="20.0" text="Sort by"/>
+                        <Label layoutX="22.0" layoutY="20.0" text="Category"/>
+                        <Label layoutX="201.0" layoutY="20.0" text="Property"/>
+                        <ChoiceBox fx:id="propertyChoiceBox" layoutX="253.0" layoutY="14.0" prefHeight="27.0"
+                                   prefWidth="94.0">
+                            <styleClass>
+                                <String fx:value="combo-box"/>
+                                <String fx:value="combo-box-base"/>
+                                <String fx:value="white-color"/>
+                            </styleClass>
+                        </ChoiceBox>
+                        <Label layoutX="374.0" layoutY="20.0" text="Type"/>
+                        <ChoiceBox fx:id="typeChoiceBox" layoutX="426.0" layoutY="15.0" prefHeight="27.0"
+                                   prefWidth="94.0">
+                            <styleClass>
+                                <String fx:value="combo-box"/>
+                                <String fx:value="combo-box-base"/>
+                                <String fx:value="white-color"/>
+                            </styleClass>
+                        </ChoiceBox>
+                    </children>
+                </Pane>
+                <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="-1.0" layoutY="119.0" prefHeight="517.0"
+                            prefWidth="751.0">
+                    <content>
+                        <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+                <Pane prefHeight="54.0" prefWidth="751.0" styleClass="primary-color">
+                    <children>
+                        <Pane fx:id="priceRangePane" layoutX="465.0" layoutY="1.0" prefHeight="54.0" prefWidth="286.0"
+                              styleClass="primary-color">
+                            <children>
+                                <Label layoutX="14.0" layoutY="19.0" text="Price range"/>
+                                <TextField fx:id="minPriceRangeTextField" layoutX="84.0" layoutY="15.0"
+                                           prefHeight="25.0" prefWidth="59.0"/>
+                                <TextField fx:id="maxPriceRangeTextField" layoutX="163.0" layoutY="15.0"
+                                           prefHeight="25.0" prefWidth="59.0"/>
+                                <Label layoutX="150.0" layoutY="19.0" text="-"/>
+                                <Button fx:id="priceRangeConfirmButton" layoutX="236.0" layoutY="15.0"
+                                        mnemonicParsing="false" prefHeight="25.0" prefWidth="38.0" text="Go"/>
+                            </children>
+                        </Pane>
+                        <Label fx:id="labelMode" layoutX="34.0" layoutY="14.0" text="Light Mode">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="btnMode" layoutX="144.0" layoutY="11.0" mnemonicParsing="false"
+                                onAction="#changeMode" prefHeight="33.0" prefWidth="38.0">
+                            <graphic>
+                                <ImageView fx:id="imgMode" fitHeight="25.0" fitWidth="52.0" pickOnBounds="true"
+                                           preserveRatio="true" styleClass="button">
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Pane fx:id="ownerNamePane" layoutX="194.0" layoutY="16.0" prefHeight="22.0" prefWidth="136.0"
+                              styleClass="primary-color">
+                            <children>
+                                <Label layoutX="22.0" layoutY="4.0" text="by : ">
+                                    <font>
+                                        <Font name="Work Sans Regular" size="12.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="ownerNameLabel" layoutX="47.0" layoutY="3.0" prefHeight="17.0"
+                                       prefWidth="124.0" text="ownerName"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane layoutX="231.0" layoutY="35.0" prefHeight="54.0" prefWidth="751.0" styleClass="primary-color">
+            <children>
+                <Label fx:id="shopNameLabel" layoutX="30.0" layoutY="12.0" text="shopNameLabel">
+                    <font>
+                        <Font size="22.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="timeLabel" layoutX="495.0" layoutY="16.0" prefHeight="24.0" prefWidth="94.0"
+                       text="timeLabel">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="logoutLabel" layoutX="637.0" layoutY="17.0" prefHeight="20.0" prefWidth="67.0"
+                       text="Logout">
+                    <font>
+                        <Font name="Work Sans Regular" size="15.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

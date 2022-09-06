@@ -1,0 +1,8 @@
+PromotionPurchase ,Cactus Jack, astroworld, Value, 1000.0, "If you use astroworld you will get discount of product  1,000 Baht when you purchase unless 20,000 Baht.", 20000.0
+PromotionQuantity ,Cactus Jack, cactus_jack, Percent, 10.0, "If you use cactus_jack you will get 10% discount of product when you purchase unless 5 pieces.", 5
+PromotionQuantity ,IT_Tech, ITTECH2021, Percent, 25.0, "Happy New Shop! ITTech!", 1
+PromotionQuantity ,IT_Tech, ITFREE, Percent, 50.0, "Buy 1 Get 1 Free!!!", 2
+PromotionQuantity ,IT_Tech, 50IT, Percent, 50.0, "1 Product discount 50%", 1
+PromotionQuantity ,IT_Tech, 25IT, Percent, 25.0, "Buy 2 discount 25%!", 2
+PromotionPurchase ,IT_Tech, ITTONS, Percent, 20.0, "Buy alot discount alot", 20000.0
+PromotionPurchase ,Cactus Jack, SAVE50, Value, 50.0, "Discount 50 Baht.When purchase 100 or more.", 100.0

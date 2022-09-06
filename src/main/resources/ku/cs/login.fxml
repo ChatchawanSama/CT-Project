@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginGP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="302.0" style="-fx-background-color: #E7E7E7;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.LoginController">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="434.0" prefWidth="302.0" style="-fx-background-color: #f8f8ff;" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.39999999999997726" AnchorPane.topAnchor="-1.0">
+            <children>
+                <Label fx:id="creditLabel" layoutX="47.0" layoutY="343.0" onMouseClicked="#showCreditForm" text="Credit" underline="true">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+
+                <ImageView fx:id="ctLoginLogoImgView" fitHeight="92.0" fitWidth="318.0" layoutX="38.0" layoutY="24.0" onDragDetected="#goToMarketPlace" pickOnBounds="true" preserveRatio="true">
+                    <image>
+
+                        <Image url="@images/login_logo.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="loginButton" layoutX="46.0" layoutY="251.0" mnemonicParsing="false" onAction="#goToMarketPlace" onMouseDragged="#mouseEnteredTheLoginButton" onMouseEntered="#mouseEnteredTheLoginButton" onMouseExited="#mouseExitedTheLoginButton" prefHeight="36.0" prefWidth="203.0" style="-fx-background-color: #FF6666;" text="Login" textFill="WHITE" />
+                <Button fx:id="loginToRegister" layoutX="46.0" layoutY="298.0" mnemonicParsing="false" onAction="#switchToRegisterButtonOnAction" onMouseDragged="#mouseEnteredTheRegisterButton" onMouseEntered="#mouseEnteredTheRegisterButton" onMouseExited="#mouseExitedTheRegisterButton" prefHeight="36.0" prefWidth="203.0" style="-fx-background-color: #F5F5F5; -fx-border-width: 1; -fx-border-color: #BEBEBE;" text="Register" textFill="#564747" />
+                <Label fx:id="loginWarningLabel" layoutX="55.0" layoutY="226.0" text="loginWarningLabel" textFill="#d72b09" />
+                <Label layoutX="187.0" layoutY="341.0" onMouseClicked="#openManual" prefHeight="18.0" prefWidth="62.0" text="How to use?" underline="true">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <VBox layoutX="34.0" layoutY="143.0" prefHeight="66.0" prefWidth="227.0">
+                    <children>
+                        <HBox prefHeight="59.0" prefWidth="240.0">
+                            <children>
+                                <ImageView fx:id="userIconImgView" fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/account_icon.png" />
+                                    </image>
+                                </ImageView>
+                                <HBox prefHeight="36.0" prefWidth="10.0" />
+                                <TextField fx:id="usernameTextField" prefHeight="26.0" prefWidth="178.0" promptText="Username" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="250.0">
+                            <children>
+                                <ImageView fx:id="passwordIconImgView" fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/password_icon.png" />
+                                    </image>
+                                </ImageView>
+                                <HBox prefHeight="26.0" prefWidth="10.0" />
+                                <PasswordField fx:id="passwordTextField" prefHeight="26.0" prefWidth="179.0" promptText="Password" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

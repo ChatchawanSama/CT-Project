@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.OrderConfirmationController">
+    <children>
+        <AnchorPane layoutX="297.0" layoutY="172.0" prefHeight="372.0" prefWidth="444.0" styleClass="primary-color">
+            <children>
+                <Rectangle fx:id="rectangleProductImg" arcHeight="5.0" arcWidth="5.0" fill="#949494" height="126.0"
+                           layoutX="30.0" layoutY="25.0" stroke="WHITE" strokeType="INSIDE" width="162.0"/>
+                <Button fx:id="backButton" layoutX="30.0" layoutY="270.0" mnemonicParsing="false"
+                        onMouseEntered="#mouseEnteredTheBackButton" onMouseExited="#mouseExitedTheBackButton"
+                        prefHeight="31.0" prefWidth="90.0"
+                        style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" text="&lt;&lt; Back"/>
+                <Button fx:id="confirmButton" layoutX="319.0" layoutY="270.0" mnemonicParsing="false"
+                        onMouseEntered="#mouseEnteredTheBuyButton" onMouseExited="#mouseExitedTheBuyButton"
+                        prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FF6666;" text="Confirm"
+                        textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Button>
+                <VBox layoutX="211.0" layoutY="28.0" prefHeight="119.0" prefWidth="228.0" styleClass="soft-color">
+                    <children>
+                        <HBox prefHeight="36.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="nameProductLabel" prefHeight="26.0" prefWidth="226.0"
+                                       text="nameProductLabel">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="170.0"/>
+                        <HBox prefHeight="36.0" prefWidth="200.0">
+                            <children>
+                                <Label fx:id="priceLabel" text="priceLabel" textFill="#ff6666">
+                                    <font>
+                                        <Font name="System Bold" size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="22.0" prefWidth="185.0">
+                            <children>
+                                <Label text="Quantity : x"/>
+                                <Label fx:id="quantityLabel" text="quantityLabel"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox layoutX="36.0" layoutY="165.0" prefHeight="27.0" prefWidth="374.0" styleClass="primary-color">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="100.0" text="Discount code :"/>
+                        <TextField fx:id="codeTextField" prefHeight="26.0" prefWidth="162.0" promptText="Code here"/>
+                        <Button id="lion" fx:id="activePromotionCodeButton" mnemonicParsing="false"
+                                onAction="#activeDiscountCode" prefHeight="26.0" prefWidth="102.0" text="Active"/>
+                    </children>
+                </HBox>
+                <HBox layoutX="36.0" layoutY="219.0" prefHeight="20.0" prefWidth="399.0" styleClass="primary-color">
+                    <children>
+                        <Label prefHeight="20.0" prefWidth="84.0" text="Total price : ">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="totalPriceLabel" prefHeight="20.0" prefWidth="305.0" text="totalPriceLabel">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="alertPromotionCodeLabel" layoutX="38.0" layoutY="192.0" prefHeight="18.0"
+                       prefWidth="399.0" text="alertPromotionCodeLabel" textFill="RED"/>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

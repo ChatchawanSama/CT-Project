@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.ProductController">
+    <children>
+        <Button id="lion" fx:id="backButton" layoutX="767.0" layoutY="693.0" mnemonicParsing="false"
+                onMouseEntered="#mouseEnteredTheBackButton" onMouseExited="#mouseExitedTheBackButton" prefHeight="38.0"
+                prefWidth="149.0" text="Back">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Button fx:id="buyButton" layoutX="515.0" layoutY="693.0" mnemonicParsing="false"
+                onMouseEntered="#mouseEnteredTheBuyButton" onMouseExited="#mouseExitedTheBuyButton" prefHeight="38.0"
+                prefWidth="150.0" style="-fx-background-color: #FF6666;" text="Buy" textFill="#ece8e8">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Spinner fx:id="quantitySpinner" layoutX="616.0" layoutY="657.0" prefHeight="26.0" prefWidth="55.0"/>
+        <VBox layoutX="515.0" layoutY="238.0" prefHeight="383.0" prefWidth="402.0">
+            <children>
+                <HBox prefHeight="29.0" prefWidth="415.0" styleClass="primary-color">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="62.0" text="#Review">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="totalReviewLabel" prefHeight="26.0" prefWidth="166.0" text="totalReviewLabel"/>
+                        <Label prefHeight="26.0" prefWidth="50.0" text="Sort by : "/>
+                        <ComboBox fx:id="sortReviewComboBox" prefHeight="26.0" prefWidth="123.0"/>
+                    </children>
+                </HBox>
+                <ScrollPane prefHeight="366.0" prefWidth="378.0">
+                    <content>
+                        <GridPane fx:id="reviewGrid" prefHeight="18.0" prefWidth="6.0">
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <Label layoutX="515.0" layoutY="662.0" text="Quantity to buy : "/>
+        <HBox layoutX="515.0" layoutY="25.0" prefHeight="38.0" prefWidth="314.0" styleClass="secondary-color">
+            <children>
+                <Label prefHeight="38.0" prefWidth="58.0" text="Sell by : ">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Label>
+                <HBox fx:id="sellerPane" prefHeight="40.0" prefWidth="243.0" spacing="10.0"
+                      styleClass="secondary-color">
+                    <children>
+                        <Circle fx:id="sellerCircleImage" fill="DODGERBLUE" radius="20.0" stroke="BLACK"
+                                strokeType="INSIDE"/>
+                        <Label fx:id="shopNameLabel" prefHeight="38.0" prefWidth="248.0" text="shopName"
+                               textFill="#ff6666">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <HBox layoutX="515.0" layoutY="634.0" prefHeight="23.0" prefWidth="314.0" styleClass="secondary-color">
+            <children>
+                <Label prefHeight="18.0" prefWidth="180.0" text="Remaining quantity : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <HBox prefHeight="23.0" prefWidth="0.0"/>
+                <Label fx:id="productQuantity" prefHeight="18.0" prefWidth="221.0" text="productQuantity"/>
+            </children>
+        </HBox>
+        <AnchorPane layoutX="46.0" layoutY="25.0" prefHeight="707.0" prefWidth="378.0" styleClass="primary-color">
+            <children>
+                <Rectangle fx:id="productImage" arcHeight="5.0" arcWidth="5.0" fill="#dfdfdf" height="211.0"
+                           layoutX="78.0" layoutY="30.0" stroke="#cfc8c8" strokeType="INSIDE" width="222.0"/>
+                <Label layoutX="36.0" layoutY="471.0" prefHeight="18.0" prefWidth="51.0" text="Detail : ">
+                    <font>
+                        <Font name="System Bold" size="12.0"/>
+                    </font>
+                </Label>
+                <Button id="lion" fx:id="editButton" layoutX="260.0" layoutY="666.0" mnemonicParsing="false"
+                        prefHeight="26.0" prefWidth="86.0" text="Edit"/>
+                <VBox layoutX="32.0" layoutY="254.0" prefHeight="132.0" prefWidth="314.0" styleClass="primary-color">
+                    <children>
+                        <HBox prefHeight="30.0" prefWidth="314.0" styleClass="primary-color">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="65.0" text="Name : ">
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="productName" prefHeight="27.0" prefWidth="248.0" text="productName"
+                                       textFill="#ff6666">
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="22.0" prefWidth="314.0" styleClass="primary-color">
+                            <children>
+                                <Label prefHeight="27.0" prefWidth="65.0" text="Price : ">
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="productPrice" prefHeight="27.0" prefWidth="248.0" text="productPrice"
+                                       textFill="#ff6666">
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Label fx:id="ratingLabel" prefHeight="21.0" prefWidth="314.0" text="ratingLabel">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Label>
+                        <HBox prefHeight="47.0" prefWidth="314.0">
+                            <children>
+                                <ImageView fx:id="productRatingStarOne" fitHeight="36.0" fitWidth="41.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/no_star.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="productRatingStarTwo" fitHeight="36.0" fitWidth="41.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/no_star.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="productRatingStarThree" fitHeight="36.0" fitWidth="41.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/no_star.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="productRatingStarFour" fitHeight="36.0" fitWidth="41.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/no_star.png"/>
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="productRatingStarFive" fitHeight="36.0" fitWidth="41.0"
+                                           pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/no_star.png"/>
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Button id="bevel-grey" fx:id="reportButton" layoutX="237.0" layoutY="466.0" mnemonicParsing="false"
+                        onAction="#handleReportButton" prefHeight="27.0" prefWidth="93.0"
+                        stylesheets="@css/modena/lightMode.css" text="Report">
+                    <graphic>
+                        <ImageView fx:id="reportIcon" fitHeight="19.0" fitWidth="28.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@images/report_icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font size="34.0"/>
+                    </font>
+                </Button>
+                <HBox layoutX="40.0" layoutY="378.0" prefHeight="82.0" prefWidth="298.0" styleClass="soft-color">
+                    <children>
+                        <Text fx:id="categoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="categoryText"
+                              wrappingWidth="297.80311584472656"/>
+                    </children>
+                </HBox>
+                <ScrollPane layoutX="36.0" layoutY="498.0" prefHeight="148.0" prefWidth="306.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="169.0" prefWidth="308.0"
+                                    styleClass="soft-color">
+                            <children>
+                                <Text fx:id="productDetail" layoutX="13.0" layoutY="27.0" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="productDetail" wrappingWidth="266.400018310547"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+        <VBox fx:id="reviewBox" layoutX="515.0" layoutY="72.0" prefHeight="162.0" prefWidth="401.0"
+              styleClass="primary-color">
+            <children>
+                <HBox prefHeight="1.0" prefWidth="346.0"/>
+                <HBox prefHeight="5.0" prefWidth="321.0"/>
+                <HBox prefHeight="43.0" prefWidth="346.0" styleClass="primary-color">
+                    <children>
+                        <HBox prefHeight="46.0" prefWidth="6.0"/>
+                        <Circle fx:id="buyerCircleImg" fill="DODGERBLUE" radius="19.0" stroke="BLACK"
+                                strokeType="INSIDE"/>
+                        <HBox prefHeight="100.0" prefWidth="11.0"/>
+                        <Label fx:id="buyerNameLabel" prefHeight="37.0" prefWidth="97.0" text="buyerNameLabel">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                        <ImageView fx:id="oneStarImgView" fitHeight="33.0" fitWidth="38.0"
+                                   onMouseClicked="#oneStarClicked" onMouseEntered="#mouseEnteredOneStar"
+                                   onMouseExited="#mouseExitedStar" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/no_star.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="twoStarImgView" fitHeight="33.0" fitWidth="38.0"
+                                   onMouseClicked="#twoStarClicked" onMouseEntered="#mouseEnteredTwoStar"
+                                   onMouseExited="#mouseExitedStar" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/no_star.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="threeStarImgView" fitHeight="33.0" fitWidth="38.0"
+                                   onMouseClicked="#threeStarClicked" onMouseEntered="#mouseEnteredThreeStar"
+                                   onMouseExited="#mouseExitedStar" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/no_star.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="fourStarImgView" fitHeight="33.0" fitWidth="38.0"
+                                   onMouseClicked="#fourStarClicked" onMouseEntered="#mouseEnteredFourStar"
+                                   onMouseExited="#mouseExitedStar" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/no_star.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="fiveStarImgView" fitHeight="33.0" fitWidth="38.0"
+                                   onMouseClicked="#fiveStarClicked" onMouseEntered="#mouseEnteredFiveStar"
+                                   onMouseExited="#mouseExitedStar" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/no_star.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox prefHeight="74.0" prefWidth="321.0">
+                    <children>
+                        <HBox prefHeight="82.0" prefWidth="12.0"/>
+                        <TextArea fx:id="reviewTextArea" prefHeight="74.0" prefWidth="378.0" promptText="Comment"/>
+                    </children>
+                </HBox>
+                <HBox prefHeight="6.0" prefWidth="346.0"/>
+                <HBox prefHeight="8.0" prefWidth="377.0" styleClass="primary-color">
+                    <children>
+                        <HBox prefHeight="26.0" prefWidth="14.0"/>
+                        <Label fx:id="warningReviewLabel" prefHeight="26.0" prefWidth="174.0" text="warningReviewLabel"
+                               textFill="RED"/>
+                        <Button id="lion" fx:id="editReviewButton" mnemonicParsing="false" prefHeight="26.0"
+                                prefWidth="116.0" stylesheets="@css/modena/lightMode.css" text="Edit"/>
+                        <Button id="lion" fx:id="reviewButton" mnemonicParsing="false" prefHeight="26.0"
+                                prefWidth="112.0" text="Review"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <GridPane fx:id="reportPane" layoutX="290.0" layoutY="320.0" prefHeight="30.0" prefWidth="24.0">
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+    </children>
+</AnchorPane>

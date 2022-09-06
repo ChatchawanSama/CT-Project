@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="reportStage" prefHeight="316.0" prefWidth="500.0"
+            styleClass="secondary-color" xmlns="http://javafx.com/javafx/"
+            fx:controller="ku.cs.controllers.ReportController">
+    <children>
+        <Label fx:id="reportTypeText" layoutX="21.0" layoutY="15.0" prefHeight="38.0" prefWidth="146.0"
+               text="Reported [Type] :">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="reportNameLabel" layoutX="171.0" layoutY="15.0" prefHeight="38.0" prefWidth="273.0"
+               text="ReportedProduct/Review">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label layoutX="21.0" layoutY="44.0" prefHeight="38.0" prefWidth="59.0" text="Subject">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <ComboBox fx:id="subjectBox" layoutX="38.0" layoutY="82.0" prefHeight="25.0" prefWidth="393.0"/>
+        <Label fx:id="subjectWarningText" layoutX="37.0" layoutY="110.0" prefHeight="17.0" prefWidth="182.0"
+               text="Please Select Report Detail!!" textFill="RED"/>
+        <Button fx:id="submitButton" layoutX="411.0" layoutY="269.0" mnemonicParsing="false"
+                onAction="#handleSubmitButton" onMouseEntered="#mouseEnteredTheSubmitButton"
+                onMouseExited="#mouseExitedTheSubmitButton" prefHeight="30.0" prefWidth="66.0"
+                style="-fx-background-color: #DADADA; -fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;"
+                text="Submit"/>
+        <TextArea fx:id="detailBox" layoutX="37.0" layoutY="164.0" prefHeight="94.0" prefWidth="394.0"/>
+        <Label layoutX="21.0" layoutY="126.0" prefHeight="38.0" prefWidth="59.0" text="Detail">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Label>
+        <Label fx:id="detailWarningText" layoutX="37.0" layoutY="260.0" prefHeight="17.0" prefWidth="182.0"
+               text="Please Enter Detail!!" textFill="RED"/>
+    </children>
+</AnchorPane>

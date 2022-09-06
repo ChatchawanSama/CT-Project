@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="768.0" prefWidth="1024.0" styleClass="secondary-color"
+            xmlns="http://javafx.com/javafx/" fx:controller="ku.cs.controllers.AdminPageController">
+    <children>
+        <Pane layoutX="22.0" layoutY="23.0" prefHeight="71.0" prefWidth="229.0" styleClass="primary-color">
+            <children>
+                <Label fx:id="adminUsernameLabel" layoutX="61.0" layoutY="36.0" prefHeight="26.0" prefWidth="155.0"
+                       text="AdminNameLabel">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="61.0" layoutY="14.0" prefHeight="26.0" prefWidth="42.0" text="Admin"/>
+                <Circle fx:id="adminImg" fill="DODGERBLUE" layoutX="30.0" layoutY="36.0" radius="24.0" stroke="BLACK"
+                        strokeType="INSIDE"/>
+            </children>
+        </Pane>
+        <Button fx:id="afterReportLogButton" layoutX="455.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-radius: 15; -fx-background-color: #E20202;" text="Report Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="reportLogButton" layoutX="455.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-radius: 15; -fx-background-color: #e6e6e6;" text="Report Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="afterCategoryLogButton" layoutX="653.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-radius: 15; -fx-background-color: #E20202;" text="Category Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="categoryButton" layoutX="653.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-radius: 15; -fx-background-color: #e6e6e6;" text="Category Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="afterUserLogButton" layoutX="258.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-radius: 15; -fx-background-color: #E20202;" text="User Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="userLogButton" layoutX="258.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#handleButtonAction" prefHeight="54.0" prefWidth="190.0"
+                style="-fx-background-color: #e6e6e6;" text="User Log">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="backButton" layoutX="875.0" layoutY="31.0" mnemonicParsing="false"
+                onAction="#switchToMarketUsingBackButton" prefHeight="54.0" prefWidth="116.0"
+                style="-fx-background-radius: 15; -fx-background-color: #e6e6e6;" text="Back">
+            <font>
+                <Font size="16.0"/>
+            </font>
+        </Button>
+        <Pane fx:id="userLogPane" layoutX="22.0" layoutY="110.0" prefHeight="632.0" prefWidth="982.0"
+              styleClass="primary-color">
+            <children>
+                <Pane layoutX="324.0" layoutY="13.0" prefHeight="604.0" prefWidth="648.0" styleClass="secondary-color">
+                    <children>
+                        <Label layoutX="42.0" layoutY="190.0" prefHeight="41.0" prefWidth="150.0" text="Username :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="240.0" prefHeight="41.0" prefWidth="150.0" text="DisplayName :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Circle fx:id="profileImage" fill="DODGERBLUE" layoutX="96.0" layoutY="97.0" radius="71.0"
+                                stroke="BLACK" strokeType="INSIDE"/>
+                        <Label layoutX="42.0" layoutY="290.0" prefHeight="41.0" prefWidth="150.0" text="Shop :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="340.0" prefHeight="41.0" prefWidth="150.0" text="Latest Login :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="390.0" prefHeight="41.0" prefWidth="150.0" text="Status :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="loginAttemptText" layoutX="42.0" layoutY="440.0" prefHeight="41.0"
+                               prefWidth="150.0" text="Login Attempt :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="nameLabel" layoutX="220.0" layoutY="190.0" prefHeight="41.0" prefWidth="399.0"
+                               text="UsernameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="displayNameLabel" layoutX="220.0" layoutY="240.0" prefHeight="41.0"
+                               prefWidth="399.0" text="DisplayNameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="shopNameLabel" layoutX="220.0" layoutY="290.0" prefHeight="41.0" prefWidth="399.0"
+                               text="ShopNameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="latestLoginLabel" layoutX="220.0" layoutY="340.0" prefHeight="41.0"
+                               prefWidth="399.0" text="LatestLoginLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="statusLabel" layoutX="220.0" layoutY="390.0" prefHeight="41.0" prefWidth="399.0"
+                               text="StatusLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="loginAttemptLabel" layoutX="220.0" layoutY="440.0" prefHeight="41.0"
+                               prefWidth="399.0" text="LoginAttemptLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Button fx:id="unbanButton" layoutX="42.0" layoutY="496.0" mnemonicParsing="false"
+                                onAction="#handleUnbanButton" prefHeight="53.0" prefWidth="113.0"
+                                style="-fx-background-color: #00ff0f; -fx-background-radius: 15;" text="Unban">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                        <Button fx:id="banButton" layoutX="42.0" layoutY="496.0" mnemonicParsing="false"
+                                onAction="#handleBanButton" prefHeight="53.0" prefWidth="113.0"
+                                style="-fx-background-color: #ff0000; -fx-background-radius: 15;" text="Ban">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+                <ListView id="lion" fx:id="userListView" layoutX="9.0" layoutY="11.0" prefHeight="606.0"
+                          prefWidth="300.0"/>
+            </children>
+        </Pane>
+        <Pane fx:id="categoryPane" layoutX="22.0" layoutY="110.0" prefHeight="632.0" prefWidth="982.0"
+              styleClass="primary-color">
+            <children>
+                <Button id="lion" fx:id="categorySubmitButton" layoutX="865.0" layoutY="568.0" mnemonicParsing="false"
+                        text="Submit"/>
+                <Button id="lion" fx:id="categoryClearButton" layoutX="54.0" layoutY="568.0" mnemonicParsing="false"
+                        text="Clear"/>
+                <Button id="bevel-grey" fx:id="categoryAddButton" layoutX="236.0" layoutY="461.0"
+                        mnemonicParsing="false" text="Add"/>
+                <Button id="bevel-grey" fx:id="propertyAddButton" layoutX="472.0" layoutY="462.0"
+                        mnemonicParsing="false" text="Add"/>
+                <Button id="bevel-grey" fx:id="typeAddButton" layoutX="692.0" layoutY="462.0" mnemonicParsing="false"
+                        text="Add"/>
+                <Label layoutX="258.0" layoutY="78.0" text="Category"/>
+                <Label layoutX="468.0" layoutY="78.0" text="Property"/>
+                <Label layoutX="699.0" layoutY="78.0" text="Type"/>
+                <Label fx:id="categoryExists" layoutX="219.0" layoutY="424.0" text="Category already exists"
+                       textFill="RED"/>
+                <Label fx:id="propertyExists" layoutX="431.0" layoutY="424.0" text="Property already exists"
+                       textFill="RED"/>
+                <Label fx:id="typeExists" layoutX="662.0" layoutY="424.0" text="Type already exists" textFill="RED"/>
+                <ListView id="lion" fx:id="categoryListView" layoutX="182.0" layoutY="118.0" prefHeight="200.0"
+                          prefWidth="200.0"/>
+                <ListView id="lion" fx:id="typeListView" layoutX="612.0" layoutY="118.0" prefHeight="200.0"
+                          prefWidth="200.0"/>
+                <ListView id="lion" fx:id="propertyListView" layoutX="397.0" layoutY="118.0" prefHeight="200.0"
+                          prefWidth="200.0"/>
+                <TextField fx:id="categoryTextField" layoutX="204.0" layoutY="386.0"/>
+                <TextField fx:id="propertyTextField" layoutX="423.0" layoutY="386.0"/>
+                <TextField fx:id="typeTextField" layoutX="637.0" layoutY="386.0"/>
+                <Label fx:id="invalidPropertyLabel" layoutX="412.0" layoutY="424.0"
+                       text="Please add at least 1 property" textFill="RED"/>
+                <Label fx:id="invalidTypeLabel" layoutX="643.0" layoutY="424.0" text="Please add at least 1 type"
+                       textFill="RED"/>
+                <Label fx:id="successLabel" layoutX="896.0" layoutY="542.0" text="Success !" textFill="#00d0ff"/>
+            </children>
+        </Pane>
+        <Pane fx:id="reportLogPane" layoutX="22.0" layoutY="110.0" prefHeight="632.0" prefWidth="982.0"
+              styleClass="secondary-color">
+            <children>
+                <ListView id="lion" fx:id="reportListView" layoutX="9.0" layoutY="11.0" prefHeight="606.0"
+                          prefWidth="300.0"/>
+                <Pane layoutX="324.0" layoutY="13.0" prefHeight="604.0" prefWidth="648.0" styleClass="primary-color">
+                    <children>
+                        <Label layoutY="-4.0" prefHeight="41.0" prefWidth="143.0" text="Reported Type">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="reportTypeLabel" layoutX="33.0" layoutY="37.0" prefHeight="41.0" prefWidth="299.0"
+                               text="ReportTypeLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutY="78.0" prefHeight="41.0" prefWidth="215.0" text="Product Name">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="productNameLabel" layoutX="30.0" layoutY="119.0" prefHeight="41.0"
+                               prefWidth="337.0" text="ProductNameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="priceRatingText" layoutX="3.0" layoutY="154.0" prefHeight="41.0" prefWidth="215.0"
+                               text="Price/Rating">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="priceRatingLabel" layoutX="30.0" layoutY="190.0" prefHeight="41.0"
+                               prefWidth="299.0" text="Price/RatingLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="detailContentText" layoutY="225.0" prefHeight="41.0" prefWidth="215.0"
+                               text="Detail/Content">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Rectangle fx:id="reportedImg" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="179.0"
+                                   layoutX="387.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" width="239.0"/>
+                        <Text fx:id="detailContentLabel" layoutX="29.0" layoutY="285.0" strokeType="OUTSIDE"
+                              strokeWidth="0.0" text="Detail/ContentLabel" wrappingWidth="606.2278747558594">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Text>
+                        <Label fx:id="buyerNameText" layoutX="363.0" layoutY="195.0" text="BuyerName:">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="buyerNameLabel" layoutX="478.0" layoutY="195.0" prefHeight="30.0"
+                               prefWidth="172.0" text="BuyerNameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="396.0" prefHeight="41.0" prefWidth="152.0" text="Reporter Name :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="reporterNameLabel" layoutX="157.0" layoutY="396.0" prefHeight="41.0"
+                               prefWidth="299.0" text="ReporterNameLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="431.0" prefHeight="41.0" prefWidth="81.0" text="Subject :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="472.0" prefHeight="41.0" prefWidth="54.0" text="Time :">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="timeLabel" layoutX="66.0" layoutY="472.0" prefHeight="41.0" prefWidth="274.0"
+                               text="TimeLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="subjectLabel" layoutX="86.0" layoutY="431.0" prefHeight="41.0" prefWidth="299.0"
+                               text="SubjectLabel">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="510.0" prefHeight="41.0" prefWidth="215.0" text="Report Detail">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Label>
+                        <Text fx:id="reportDetail" layoutX="36.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Detail" wrappingWidth="606.2278747558593">
+                            <font>
+                                <Font size="20.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane fx:id="defaultPane" layoutX="22.0" layoutY="110.0" prefHeight="632.0" prefWidth="982.0"
+              styleClass="primary-color"/>
+    </children>
+</AnchorPane>

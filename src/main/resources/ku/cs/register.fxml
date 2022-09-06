@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="485.0" prefWidth="371.0" style="-fx-background-color: #DCDCDC;"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ku.cs.controllers.RegisterController">
+    <children>
+        <AnchorPane prefHeight="485.0" prefWidth="371.0" style="-fx-background-color: #F8F8FF;">
+            <children>
+                <ImageView fx:id="addImgPicView" fitHeight="74.0" fitWidth="70.0" layoutX="39.0" layoutY="261.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/default_profile.png"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="34.0" layoutY="233.0" prefHeight="18.0" prefWidth="79.0" text="Profile image : "/>
+                <Button fx:id="registerButton" layoutX="205.0" layoutY="416.0" mnemonicParsing="false"
+                        onAction="#handleRegisterButton" onMouseEntered="#mouseEnteredTheRegisterButton"
+                        onMouseExited="#mouseExitedTheRegisterButton" prefHeight="36.0" prefWidth="138.0"
+                        style="-fx-background-color: #ef474a;" text="Register" textFill="WHITE"/>
+                <Button fx:id="returnToLogin" layoutX="34.0" layoutY="416.0" mnemonicParsing="false"
+                        onAction="#switchToLogin" onMouseEntered="#mouseEnteredTheBackButton"
+                        onMouseExited="#mouseExitedTheBackButton" prefHeight="36.0" prefWidth="138.0"
+                        style="-fx-background-color: #FFFFFF; -fx-border-width: 1; -fx-border-color: #BEBEBE;"
+                        text="&lt;&lt; Back"/>
+                <Label fx:id="warningRegisterLabel" layoutX="36.0" layoutY="387.0" prefHeight="18.0" prefWidth="307.0"
+                       text="warningRegisterLabel" textFill="#ed0808"/>
+                <HBox layoutX="32.0" layoutY="351.0" prefHeight="27.0" prefWidth="307.0">
+                    <children>
+                        <AnchorPane prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #cececa;">
+                            <children>
+                                <Label fx:id="pathImgLabel" layoutX="10.0" layoutY="5.0" prefHeight="18.0"
+                                       prefWidth="202.0" text="pathImgLabel"/>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="chooseImgButton" mnemonicParsing="false" onAction="#handleChooseImgButton"
+                                prefHeight="27.0" prefWidth="79.0"
+                                style="-fx-border-width: 1; -fx-border-color: #F5F5F5;" text="Choose File"/>
+                    </children>
+                </HBox>
+                <VBox layoutX="32.0" layoutY="86.0" prefHeight="147.0" prefWidth="328.0">
+                    <children>
+                        <HBox prefHeight="36.0" prefWidth="326.0">
+                            <children>
+                                <Label prefHeight="28.0" prefWidth="106.0" text="Display Name : "/>
+                                <TextField fx:id="displayNameTextField" prefHeight="26.0" prefWidth="201.0"
+                                           promptText="Enter your display name"/>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="36.0" prefWidth="322.0">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="106.0" text="Username :"/>
+                                <TextField fx:id="userNameTextField" prefHeight="26.0" prefWidth="201.0"
+                                           promptText="Enter your username"/>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="37.0" prefWidth="386.0">
+                            <children>
+                                <Label prefHeight="28.0" prefWidth="106.0" text="Password : "/>
+                                <PasswordField fx:id="passWordTextField" prefHeight="26.0" prefWidth="201.0"
+                                               promptText="Enter your password"/>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="9.0" prefWidth="358.0">
+                            <children>
+                                <Label prefHeight="26.0" prefWidth="106.0" text="Confirm Password : "/>
+                                <PasswordField fx:id="conFirmPassWordTextField" prefHeight="26.0" prefWidth="201.0"
+                                               promptText="Confirm your password"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <AnchorPane layoutX="63.0" layoutY="14.0" prefHeight="59.0" prefWidth="243.0"
+                            style="-fx-background-color: #F8F8FF; -fx-background-radius: 5;">
+                    <children>
+                        <ImageView fx:id="registerIconImgView" fitHeight="55.0" fitWidth="61.0" layoutX="14.0"
+                                   layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/registration_icon.png"/>
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="registrationLabelPicImgView" fitHeight="38.0" fitWidth="162.0" layoutX="73.0"
+                                   layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/registration_text.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

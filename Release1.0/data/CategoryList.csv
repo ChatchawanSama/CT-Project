@@ -1,0 +1,6 @@
+Food, 4, Size, 3, S, M, XL, Meat, 6, None, Beef, Pork, Goat, Lamb, Chicken, Taste, 3, Sweet, Sour, Salty, Spicy Level, 4, Mild, Medium, Hot, Extra Hot, 
+Car, 3, Wheel, 4, 3, 4, 6, 8, Color, 8, Red, Green, Blue, Orange, Purple, White, Black, Grey, Engine, 3, Gas, Electric, Hybrid, 
+Clothe, 2, Size, 5, S, M, X, XL, XXL, Color, 8, Red, Green, Blue, Orange, Purple, White, Black, Grey, 
+Mobile, 4, Brand, 8, Apple, Google, Huawei, Nokia, Sony, Samsung, Blackberry, Vivo, Storage, 5, 64 GB, 128 GB, 256 GB, 512 GB, 1 TB, OS, 4, iOS, Android, Windows, Linux, Screen, 3, LCD, OLED, AMOLED, 
+Shoe, 3, Size, 8, 37, 38, 39, 40, 41, 42, 43, 44, Color, 8, Red, Green, Blue, Orange, Purple, White, Black, Grey, Brand, 6, Nanyang, Nike, Adidas, Reebok, Vans, Fila, 
+Music, 3, Version, 5, Album, Tape, Cassette, MP3, Vinyl, Main Instrument, 4, Guitar, Bass, Drum, Ukulele, Genre, 6, Hip-Hop, R&B, Rock, Jazz, Soul, Pop, 
